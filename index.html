@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   <link href='https://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet'>
+   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'> 
+    <link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+  crossorigin="anonymous" />
+    <link rel="stylesheet" href="index.css">
+<style>
+    /*
+
+    #EDF3D8 light green grey
+    #A7C247 lime green grey
+    #E03D2E red grey
+    #41768B light blue grey
+    #0F262F Dark blue grey
+    
+    */
+    
+    :root {
+        --light-green-grey: #EDF3D8;
+        --lime-green-grey: #A7C247;
+        --light-red-grey: #F0756A;
+        --red-grey: #E03D2E;
+        --light-blue-grey: #41768B;
+        --dark-blue-grey: #0F262F;
+    }
+    
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        font-family: Montserrat;
+        width: 100vw;
+        background-color: pink;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    #navbar {
+        position: fixed;
+        width: 100vw;
+        top: 0px;
+/*        background-color: var(--light-red-grey);*/
+        background-color: var(--dark-blue-grey);
+    }
+    
+    #navbar ul {
+        float: right;
+        margin-right: 15px;
+    }
+    
+    #navbar ul li {
+        display: block;
+        float: left;
+        margin: 20px 0px 20px 0px;
+    }
+        
+    #navbar ul li a {
+        padding: 20px 15px 20px 15px;
+        color: white;
+        font-weight: bolder;
+        text-decoration: none;
+        transition: .4s ease-in-out;
+    }
+    
+    #navbar ul li a:hover {
+        color: var(--light-blue-grey);
+        background-color: var(--light-green-grey);
+    }
+    
+    main {
+        width: 100vw;
+/*        background-color: blue;*/
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    #welcome-section {
+        height: 100vh;
+        width: 100vw;
+        background-color: var(--light-green-grey);
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .spacer
+    {
+            width: 100vw;
+            height: 38vh;
+    }
+    
+    .spacer-2
+    {
+            width: 100vw;
+            height: 100px;
+    }
+    
+    h1 {
+        font-family: "Maven Pro";
+        font-size: 10em;
+/*        color: var(--light-red-grey);*/
+        color: white;
+        padding-bottom: 10px;
+        margin-bottom: 0px;
+        background-color: var(--light-blue-grey);
+        line-height: 60%;
+        text-shadow: 0px 2px 4px black, 0px 2px 4px black;
+    }
+    
+    #welcome-section p {
+        color: var(--light-blue-grey);
+        font-size: 2em;
+        margin-top: 0px;
+        padding-top: 35px;
+        font-weight: bolder;
+        
+        
+        /* background-color: skyblue; */
+        
+    }
+
+    #projects {
+        width: 100vw;
+        padding: 10px 0 10px 0;
+        margin: 0px;
+        background-color: var(--light-blue-grey);
+        display: grid;
+        grid-template-columns: 30vw 30vw 30vw;
+        grid-template-rows: auto auto auto;
+        grid-gap: 2vw;
+        grid-template-areas: "cell1 cell1 cell1"
+                              "cell2 cell3 cell4"
+                              "cell5 cell6 cell7";
+        justify-content: center;
+    }
+        
+    .project-tile {
+        width: 100%;
+        background-color: var(--dark-blue-grey);
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+        transition: background-color .4s ease-in-out;
+    }
+    
+    .project-tile:hover {
+        background-color: var(--light-green-grey);
+    }
+    
+    .project-tile a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        transition: color .4s ease-in-out;
+    }
+    
+    .project-tile a:hover {
+    color: var(--light-blue-grey);
+    }
+    
+    .project-tile a img {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+    }
+    
+    .project-tile a p {
+/*        background-color: mediumaquamarine;*/
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+    }
+    
+    #cell-1 {
+        grid-area: cell1;
+    }
+    
+    h2 {
+        text-align: center;
+        font-size: 5em;
+        color: white;
+        font-family: "Maven Pro";
+        text-shadow: 0px 2px 4px black, 0px 2px 4px black;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    
+    #cell-2 {
+        grid-area: cell2;
+
+    }
+    
+    #cell-3 {
+
+        grid-area: cell3;
+
+    }
+    
+    #cell-4 {
+
+        grid-area: cell4;
+
+    }
+    
+    #cell-5 {
+
+        grid-area: cell5;
+
+    }
+    
+    #cell-6 {
+
+        grid-area: cell6;
+
+    }
+    
+    #cell-7 {
+
+        grid-area: cell7;
+
+    }
+    
+    #contact {   
+        background-color: var(--dark-blue-grey);
+        color: white;
+    }
+    
+    #contact h2 {
+        line-height: 60%;
+        background-color: var(--light-blue-grey);
+    }
+    
+    #contact p {
+/*        color:  var(--light-red-grey);*/
+        color:  var(--light-green-grey);
+        font-size: 2em;
+        text-align: center;
+        padding: 25px 15px 20px 15px;
+
+    }
+    
+    #contact ul {
+        width: 100vw;
+        padding: 20px 0 100px 0;
+        margin: 0px;
+/*        background-color: var(--lime-green-grey);*/
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto;
+        grid-gap: 2vw;
+        justify-content: center;
+        list-style: none;
+    }
+    
+    #contact ul li {
+        text-decoration-style: none;
+/*        transition: transform .5s ease-in-out;*/
+    }
+    
+    #contact ul li:hover {
+        animation-name: shake;
+        animation-duration: .4s;
+    }
+    
+    @keyframes shake {
+        0% {
+            transform: rotate(5deg);
+        }
+        25% {
+            transform: rotate(-10deg);
+        }
+        50% {
+            transform: rotate(10deg);
+        }
+        75% {
+            transform: rotate(-10deg);
+        }
+        100% {
+            transform: rotate(5deg);
+        }
+    }
+    #contact ul li a {
+        text-decoration: none;
+        color: white;
+        text-shadow: 0px 2px 4px black, 0px 2px 4px black;
+        transition: color .4s ease-in-out;
+    }
+    
+    #contact ul li a:hover {
+        color: var(--lime-green-grey);
+    }
+    
+    footer {
+        width: 100vw;
+        background-color: var(--light-green-grey);
+        color: var(--dark-blue-grey);
+        text-align: center;
+        padding: 10px 0 10px 0;
+    }
+    
+    footer p {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    /*height: 110px; same height as header or a bit more
+    margin-top: -110px; same height as header */
+    .anchor{
+            display: block;
+            height: 59px;
+            margin-top: -59px;
+            visibility: hidden;
+    }
+    
+    @media (max-width:900px) {
+        h1 {
+            font-size: 7em;
+            padding-bottom: 10px;
+        }
+    
+        #welcome-section p {
+            font-size: 1.4em;
+            margin-top: 0px;
+            padding-top: 24px;
+        }
+        h2 {
+            font-size: 3.5em;
+        }
+        
+        #contact p {
+            font-size: 1.4em;
+        }
+        
+        #projects {
+        /*width: 100vw;
+        padding: 10px 0 10px 0;
+        margin: 0px;
+        background-color: var(--light-blue-grey);
+        display: grid;*/
+        grid-template-columns: 46vw 46vw;
+        grid-template-rows: auto auto auto auto;
+        grid-gap: 3vw;
+        grid-template-areas: "cell1 cell1"
+                             "cell2 cell3" 
+                             "cell4 cell5"
+                             "cell6 cell7";
+        justify-content: center;
+    }
+        
+    @media (max-width:600px) {
+        h1 {
+            font-size: 4em;
+            padding-bottom: 10px;
+        }
+    
+        #welcome-section p {
+            font-size: .8em;
+            margin-top: 0px;
+            padding-top: 15px;
+        }
+        h2 {
+            font-size: 2.5em;
+        }
+        
+        #contact p {
+            font-size: 1em;
+            padding-top: 12px;
+        }
+        
+        #projects {
+        /*width: 100vw;
+        padding: 10px 0 10px 0;
+        margin: 0px;
+        background-color: var(--light-blue-grey);
+        display: grid;*/
+        grid-template-columns: 84vw;
+        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-gap: 8vw;
+        grid-template-areas: "cell1"
+                             "cell1"
+                             "cell2"
+                             "cell3" 
+                             "cell4"
+                             "cell5"
+                             "cell6"
+                             "cell7";
+        justify-content: center;
+        }        
+    }
+              @media (max-width:450px) {
+              #contact ul {
+          display: flex;
+          flex-direction: column;
+
+      }
+        #contact ul li {
+          text-align: center;
+          padding: 10px;
+        }
+</style>
+</head>
+<body>
+   <nav id="navbar">
+       <ul>
+           <li><a href="#welcome-section">ABOUT</a></li>
+           <li><a href="#our-services-link">WORK</a></li>
+           <li><a href="#contact">CONTACT</a></li>
+       </ul>
+   </nav>
+   <main>
+    <section id="welcome-section">
+       <div class="spacer"></div>
+       <h1>Angel Barragan</h1>
+       <p>Available for Front-End positions</p>
+    </section>
+    <span class="anchor" id="our-services-link"></span>
+    <section id="projects">
+        <div id="cell-1"><h2>My Work</h2></div>
+        <div id="cell-2" class="project-tile">
+            <a href="https://challenge-15d22.web.app/" class="project-link" target="_blank">
+            <img src="https://www.bachataspice.com/images/external/amazon-portfolio-thumbnail.png" alt="tribute page">
+            <p>Tribute Page</p></a>
+        </div>
+        <div id="cell-3" class="project-tile">
+            <a href="https://codepen.io/Barrigan/full/abNoMpe" target="_blank" class="project-link">
+            <img src="https://www.bachataspice.com/images/external/javascript-calculator.png" alt="JavaScript Calculator">
+            <p>JavaScript Calculator</p></a>
+        </div>
+        <div id="cell-4" class="project-tile">
+            <a href="https://codepen.io/Barrigan/full/yLObxrd" target="_blank" class="project-link">
+            <img src="https://www.bachataspice.com/images/external/choropleth-map.png" alt="Choropleth Map page">
+            <p>Choropleth Map</p></a>
+        </div>
+        <div id="cell-5" class="project-tile">
+            <a href="https://codepen.io/Barrigan/pen/xxwmQYP" target="_blank" class="project-link">
+            <img src="https://www.bachataspice.com/images/external/survey-page.png" alt="survey page">
+            <p>Survey Page</p></a>
+        </div>
+        <div id="cell-6" class="project-tile">
+            <a href="https://codepen.io/Barrigan/pen/MWaRYEJ" target="_blank" class="project-link">
+            <img src="https://www.bachataspice.com/images/external/landing-page.png" alt="landing page">
+            <p>Landing Page</p></a>
+        </div>
+        <div id="cell-7" class="project-tile">
+            <a href="https://codepen.io/Barrigan/full/YzwmPxd" target="_blank" class="project-link">
+            <img src="https://www.bachataspice.com/images/external/drum-machine.png" alt="Drum Machine Page">
+            <p>Drum Machine Page</p></a>
+        </div>
+        
+    </section>
+    <section id="contact">
+       <div class="spacer-2"></div>
+       <h2>Let's make it happen!</h2>
+       <p>Looking forward to start new projects...</p>
+       <ul>
+          <li class="contact-link"><a href="http://github.com/barrigan/
+          " target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+          <li class="contact-link"><a id="profile-link" href="https://codepen.io/Barrigan" target="_blank"><i class="fab fa-github"></i> FCC</a></li>
+          <li class="contact-link"><a href="mailto:dcbarrigan@gmail.com" target="_blank"><i class="fas fa-at"></i> Email me</a></li>
+          <li class="contact-link"><a href="tel:00447429147775" target="_blank"><i class="fas fa-mobile-alt"></i> Let's talk</a></li>
+       </ul> 
+    </section>
+   </main>
+ <footer id="footer">
+       <p>***This is an example portfolio. Please contact me if any of the project's code is not available and I'll provide you with a copy of it.</p>
+   </footer>
+</body>
+</html>
